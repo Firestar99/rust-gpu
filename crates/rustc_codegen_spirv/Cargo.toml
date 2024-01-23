@@ -59,7 +59,6 @@ smallvec = { version = "1.6.1", features = ["union"] }
 spirv-tools = { version = "0.9", default-features = false }
 rustc_codegen_spirv-types.workspace = true
 spirt = "0.3.0"
-# FIXME spirt = { git = "https://github.com/projectkml/spirt" }
 lazy_static = "1.4.0"
 itertools = "0.10.5"
 

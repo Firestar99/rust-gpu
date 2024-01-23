@@ -8,5 +8,5 @@ license.workspace = true
 repository.workspace = true
 
 [dependencies]
-rspirv = { git = "https://github.com/beastle9end/rspirv" }
+rspirv = "0.12"
 serde = { version = "1.0", features = ["derive"] }
