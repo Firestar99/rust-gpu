@@ -1,0 +1,85 @@
+thread 'rustc' panicked at /home/firestar99/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spirt-0.3.0/src/cfg.rs:1108:13:
+assertion failed: list_eq_key(children) ==/n    list_eq_key(self.func_def_body.at(unstructured_region).def().children)
+stack backtrace:
+   0:     0x7d30d936433c - std::backtrace_rs::backtrace::libunwind::trace::h2047b82b78957b16
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/std/src/../../backtrace/src/backtrace/libunwind.rs:93:5
+   1:     0x7d30d936433c - std::backtrace_rs::backtrace::trace_unsynchronized::he06321801fe2ac72
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/std/src/../../backtrace/src/backtrace/mod.rs:66:5
+   2:     0x7d30d936433c - std::sys_common::backtrace::_print_fmt::h3028a39ff66599c0
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/std/src/sys_common/backtrace.rs:67:5
+   3:     0x7d30d936433c - <std::sys_common::backtrace::_print::DisplayBacktrace as core::fmt::Display>::fmt::hd2dc6ab4971909d6
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/std/src/sys_common/backtrace.rs:44:22
+   4:     0x7d30d93c9f9c - core::fmt::rt::Argument::fmt::hae02ab67a447b751
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/core/src/fmt/rt.rs:138:9
+   5:     0x7d30d93c9f9c - core::fmt::write::h156c0157377de849
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/core/src/fmt/mod.rs:1114:21
+   6:     0x7d30d93570be - std::io::Write::write_fmt::hfda671e33214dbc9
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/std/src/io/mod.rs:1763:15
+   7:     0x7d30d9364124 - std::sys_common::backtrace::_print::he2b418ab91e1b6bc
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/std/src/sys_common/backtrace.rs:47:5
+   8:     0x7d30d9364124 - std::sys_common::backtrace::print::h39dd53e781dbe62d
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/std/src/sys_common/backtrace.rs:34:9
+   9:     0x7d30d9367003 - std::panicking::default_hook::{{closure}}::hac1d0be96ef52b84
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/std/src/panicking.rs:272:22
+  10:     0x7d30d9366d24 - std::panicking::default_hook::h430f734618200aae
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/std/src/panicking.rs:292:9
+  11:     0x7d30dc4f681f - std[9021ab7eb1800470]::panicking::update_hook::<alloc[b36931eabff6d458]::boxed::Box<rustc_driver_impl[3b155c69176e0130]::install_ice_hook::{closure#0}>>::{closure#0}
+  12:     0x7d30dc4f681f - std[9021ab7eb1800470]::panicking::update_hook::<alloc[b36931eabff6d458]::boxed::Box<rustc_driver_impl[3b155c69176e0130]::install_ice_hook::{closure#0}>>::{closure#0}
+  13:     0x7d30d9367831 - <alloc::boxed::Box<F,A> as core::ops::function::Fn<Args>>::call::h0ec3fa0b3629c93a
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/alloc/src/boxed.rs:2021:9
+  14:     0x7d30d9367831 - std::panicking::rust_panic_with_hook::hdb0a7131bd1f25e3
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/std/src/panicking.rs:735:13
+  15:     0x7d30d9367566 - std::panicking::begin_panic_handler::{{closure}}::h2b42e435eaa711ee
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/std/src/panicking.rs:601:13
+  16:     0x7d30d9364866 - std::sys_common::backtrace::__rust_end_short_backtrace::h3652b1b01bc073c5
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/std/src/sys_common/backtrace.rs:170:18
+  17:     0x7d30d9367302 - rust_begin_unwind
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/std/src/panicking.rs:597:5
+  18:     0x7d30d93c6625 - core::panicking::panic_fmt::h7198c5e2f1cf748f
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/core/src/panicking.rs:72:14
+  19:     0x7d30d93c66c3 - core::panicking::panic::h1b447d3d5ef2fd1c
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/core/src/panicking.rs:127:5
+  20:     0x7d30cfabbb94 - spirt::cfg::Structurizer::structurize_func::haa3c47a51adbdf68
+  21:     0x7d30cfb04774 - spirt::passes::legalize::structurize_func_cfgs::hd3635107f10f023c
+  22:     0x7d30cf3515c3 - rustc_codegen_spirv::linker::link::hb9f69cc0629020ac
+  23:     0x7d30cf265465 - rustc_codegen_spirv::link::link::hf29f0e0c0c46fe6d
+  24:     0x7d30cf2c95de - <rustc_codegen_spirv::SpirvCodegenBackend as rustc_codegen_ssa::traits::backend::CodegenBackend>::link::h362ea3e65cb578e1
+  25:     0x7d30dba454a3 - <rustc_interface[6d526cf79e1d2a3f]::queries::Linker>::link
+  26:     0x7d30dba3420c - rustc_span[a848110e357b7e8b]::set_source_map::<core[eac01cc03d7c90b2]::result::Result<(), rustc_span[a848110e357b7e8b]::ErrorGuaranteed>, rustc_interface[6d526cf79e1d2a3f]::interface::run_compiler<core[eac01cc03d7c90b2]::result::Result<(), rustc_span[a848110e357b7e8b]::ErrorGuaranteed>, rustc_driver_impl[3b155c69176e0130]::run_compiler::{closure#1}>::{closure#0}::{closure#0}>
+  27:     0x7d30dba2e180 - std[9021ab7eb1800470]::sys_common::backtrace::__rust_begin_short_backtrace::<rustc_interface[6d526cf79e1d2a3f]::util::run_in_thread_with_globals<rustc_interface[6d526cf79e1d2a3f]::interface::run_compiler<core[eac01cc03d7c90b2]::result::Result<(), rustc_span[a848110e357b7e8b]::ErrorGuaranteed>, rustc_driver_impl[3b155c69176e0130]::run_compiler::{closure#1}>::{closure#0}, core[eac01cc03d7c90b2]::result::Result<(), rustc_span[a848110e357b7e8b]::ErrorGuaranteed>>::{closure#0}::{closure#0}, core[eac01cc03d7c90b2]::result::Result<(), rustc_span[a848110e357b7e8b]::ErrorGuaranteed>>
+  28:     0x7d30dbd5758e - <<std[9021ab7eb1800470]::thread::Builder>::spawn_unchecked_<rustc_interface[6d526cf79e1d2a3f]::util::run_in_thread_with_globals<rustc_interface[6d526cf79e1d2a3f]::interface::run_compiler<core[eac01cc03d7c90b2]::result::Result<(), rustc_span[a848110e357b7e8b]::ErrorGuaranteed>, rustc_driver_impl[3b155c69176e0130]::run_compiler::{closure#1}>::{closure#0}, core[eac01cc03d7c90b2]::result::Result<(), rustc_span[a848110e357b7e8b]::ErrorGuaranteed>>::{closure#0}::{closure#0}, core[eac01cc03d7c90b2]::result::Result<(), rustc_span[a848110e357b7e8b]::ErrorGuaranteed>>::{closure#1} as core[eac01cc03d7c90b2]::ops::function::FnOnce<()>>::call_once::{shim:vtable#0}
+  29:     0x7d30d9372395 - <alloc::boxed::Box<F,A> as core::ops::function::FnOnce<Args>>::call_once::h002abea1d29efb77
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/alloc/src/boxed.rs:2007:9
+  30:     0x7d30d9372395 - <alloc::boxed::Box<F,A> as core::ops::function::FnOnce<Args>>::call_once::ha19d8c26cc20d38b
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/alloc/src/boxed.rs:2007:9
+  31:     0x7d30d9372395 - std::sys::unix::thread::Thread::new::thread_start::h6dc2d5714dd5ad65
+                               at /rustc/8ce4540bd6fe7d58d4bc05f1b137d61937d3cf72/library/std/src/sys/unix/thread.rs:108:17
+  32:     0x7d30d909ca94 - start_thread
+                               at ./nptl/pthread_create.c:447:8
+  33:     0x7d30d9129c3c - __GI___clone3
+                               at ./misc/../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+  34:                0x0 - <unknown>
+
+error: the compiler unexpectedly panicked. this is a bug.
+
+note: we would appreciate a bug report: https://github.com/rust-lang/rust/issues/new?labels=C-bug%2C+I-ICE%2C+T-compiler&template=ice.md
+
+note: please attach the file at `/home/firestar99/workspace/frameworks/rust-gpu/rustc-ice-2024-06-12T17:48:56.079241788Z-156060.txt` to your bug report
+
+note: compiler flags: -C prefer-dynamic -Z codegen-backend=/home/firestar99/workspace/frameworks/rust-gpu/target/release/deps/librustc_codegen_spirv.so -Z binary-dep-depinfo -C symbol-mangling-version=v0 -Z crate-attr=feature(register_tool) -Z crate-attr=register_tool(rust_gpu) -C overflow-checks=off -C debug-assertions=off -Z inline-mir=off -C debuginfo=2 -C embed-bitcode=no -C target-feature=+Int8,+Int16,+Int64,+Float64,+ShaderClockKHR,+ext:SPV_KHR_shader_clock --crate-type dylib -Z unstable-options -Z crate-attr=no_std -Z crate-attr=feature(asm_const,asm_experimental_arch)
+
+query stack during panic:
+end of query stack
+
+error: the compiler unexpectedly panicked. this is a bug.
+
+note: we would appreciate a bug report: https://github.com/EmbarkStudios/rust-gpu/issues/new
+
+note: please attach the file at `/home/firestar99/workspace/frameworks/rust-gpu/rustc-ice-2024-06-12T17:48:56.079241788Z-156060.txt` to your bug report
+
+note: compiler flags: -C prefer-dynamic -Z codegen-backend=/home/firestar99/workspace/frameworks/rust-gpu/target/release/deps/librustc_codegen_spirv.so -Z binary-dep-depinfo -C symbol-mangling-version=v0 -Z crate-attr=feature(register_tool) -Z crate-attr=register_tool(rust_gpu) -C overflow-checks=off -C debug-assertions=off -Z inline-mir=off -C debuginfo=2 -C embed-bitcode=no -C target-feature=+Int8,+Int16,+Int64,+Float64,+ShaderClockKHR,+ext:SPV_KHR_shader_clock --crate-type dylib -Z unstable-options -Z crate-attr=no_std -Z crate-attr=feature(asm_const,asm_experimental_arch)
+
+query stack during panic:
+end of query stack
+note: `rust-gpu` version `0.9.0`
+
